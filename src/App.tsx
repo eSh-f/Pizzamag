@@ -1,13 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import HomePage from "./Pages/HomePage";
-import CardPage from "./Pages/CardPage";
+import Home from "./Pages/Home";
+import Cart from "./Pages/Cart";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/card" element={<CardPage />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/css" element={<Header />} />
     </Routes>
   );
 }

@@ -1,0 +1,40 @@
+.homeContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFDF8C;
+
+h4{
+  margin: 15px 45px;
+}
+
+}
+
+.homeWrapper{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 80%;
+  margin: 20px auto;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.pizzaWrapper{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.pizzaOptions{
+  margin: 15px 30px ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pizzaList{
+  display: flex;
+  list-style:  none;
+
+}

@@ -1,0 +1,21 @@
+.sort{
+  display: flex;
+  align-items: center;
+
+  p {
+    font-weight: 700;
+  }
+
+  select{
+    align-items: center;
+    font-size: 16px;
+    color: #fe5f1e;
+    appearance: none;
+    margin: 5px;
+    border: 0px solid #fe5f1e;
+    background-color: white;
+
+  }
+
+
+}
