@@ -5,32 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4533c20-dca5-40a2-862d-ff8e2bfbc8d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sort.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pizza/PizzaItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pizza/PizzaLIst.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Categories.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/PizzaCard.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Sort.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/globals.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/slices/cartSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Cart.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/CardPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FIlter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/pizzaApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pizzas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/slices/pizzaSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pizza/PizzaItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pizza/PizzaItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pizza/PizzaLIst.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pizza/PizzaLIst.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/PizzaCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/PizzaCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,25 +50,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/esh/dev/pizza",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/esh/dev/pizza/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.general",
-    "ts.external.directory.path": "/home/esh/dev/pizza/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/esh/dev/pizza&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/esh/dev/pizza/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/esh/dev/pizza/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/pizza" />
@@ -118,7 +103,13 @@
       <workItem from="1746684300557" duration="40000" />
       <workItem from="1746767837321" duration="4000" />
       <workItem from="1746768593447" duration="5450000" />
-      <workItem from="1746859883309" duration="21882000" />
+      <workItem from="1746859883309" duration="22150000" />
+      <workItem from="1746934294728" duration="7024000" />
+      <workItem from="1746945449956" duration="3746000" />
+      <workItem from="1746953843707" duration="10336000" />
+      <workItem from="1747014025780" duration="7784000" />
+      <workItem from="1747066877688" duration="1228000" />
+      <workItem from="1747101055626" duration="8106000" />
     </task>
     <servers />
   </component>

@@ -15,9 +15,7 @@ const Home = () => {
           <Sort />
         </div>
         <h4>Все пиццы</h4>
-        <div className={"pizzaWrapper"}>
-          <PizzaLIst />
-        </div>
+        <PizzaLIst />
       </div>
     </div>
   );

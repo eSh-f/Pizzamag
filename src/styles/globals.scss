@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
-body {
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFDF8C; // можно перенести сюда
   font-family: 'Roboto', sans-serif;
 }
+

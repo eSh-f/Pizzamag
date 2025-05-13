@@ -1,6 +1,7 @@
 .pizzaCard {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   background-color: white;
   padding: 20px;
   border-radius: 20px;

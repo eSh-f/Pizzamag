@@ -6,21 +6,19 @@ import "../../App.css";
 const PizzaLIst = () => {
   const { data = [], error, isLoading } = useGetAllPizzasQuery();
 
-  console.log(data.map((p) => p.types));
+  console.log(data.map((p) => p.imageUrl));
 
   return (
-    <>
-      <ul className="pizzaList">
-        {data.map((p, index) => (
-          <PizzaItem
-            key={index}
-            price={p.price}
-            name={p.name}
-            image={p.imageUrl}
-          />
-        ))}
-      </ul>
-    </>
+    <div className="pizzaList">
+      {data.map((p) => (
+        <PizzaItem
+          key={p.id}
+          price={p.price}
+          name={p.name}
+          image={p.imageUrl}
+        />
+      ))}
+    </div>
   );
 };
 

@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import pizzaSlice from "./slices/pizzaSlice";
 import { pizzaApi } from "./pizzaApi";
+import cartSlice from "./slices/cartSlice";
 
 export const store = configureStore({
   reducer: {
+    cart: cartSlice,
     [pizzaApi.reducerPath]: pizzaApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
