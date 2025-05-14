@@ -15,6 +15,7 @@ const Home = () => {
           <Sort />
         </div>
         <h4>Все пиццы</h4>
+
         <PizzaLIst />
       </div>
     </div>

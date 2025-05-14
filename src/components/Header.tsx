@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "../styles/components/Header.module.scss";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleClickCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -19,7 +26,7 @@ const Header = () => {
         </div>
       </div>
 
-      <button className={styles.cardButton}>
+      <button className={styles.cartButton} onClick={handleClickCart}>
         <span>
           <p>540 Р</p>
         </span>
