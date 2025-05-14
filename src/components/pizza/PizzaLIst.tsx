@@ -16,6 +16,7 @@ const PizzaLIst = () => {
         : data.map((p) => (
             <PizzaItem
               key={p.id}
+              id={p.id}
               price={p.price}
               name={p.name}
               imageUrl={p.imageUrl}

@@ -3,20 +3,27 @@ import Header from "../components/Header";
 import "../styles/app.scss";
 import styles from "../styles/components/Cart.module.scss";
 import { RootState } from "../Redux/store";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../Redux/slices/cartSlice";
 const Cart = () => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.item);
   const price = useSelector((state: RootState) => state.cart.total);
   const quantity = useSelector((state: RootState) =>
     state.cart.item.reduce((sum, obj) => sum + obj.quantity, 0),
   );
 
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
+
   return (
     <div className={styles.cartPage}>
       <div className={styles.cartContent}>
         <Header />
         <div className={styles.cartHeader}>
-          <h5>🗑️Корзина</h5> <button>🚫Очистить корзину</button>
+          <h5>🗑️Корзина</h5>{" "}
+          <button onClick={handleClearCart}>🚫Очистить корзину</button>
         </div>
         {cartItems.map((item) => (
           <div className={styles.cartItem}>

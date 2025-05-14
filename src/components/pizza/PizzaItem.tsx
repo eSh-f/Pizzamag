@@ -7,24 +7,34 @@ import { RootState } from "../../Redux/store";
 import { addItem } from "../../Redux/slices/cartSlice";
 
 interface IPizzaItemProps {
-  key: number;
+  id: number;
   imageUrl: string;
   name: string;
   price: number;
 }
 
-const PizzaItem: FC<IPizzaItemProps> = ({ key, name, imageUrl, price }) => {
+const PizzaItem: FC<IPizzaItemProps> = ({ id, name, imageUrl, price }) => {
   const [activeType, setActiveType] = useState(0);
   const [activeSize, setActiveSize] = useState(0);
   const typePizzas = ["тонкое", "традиционное"];
-  const sizePizzas = ["26см.", "30см.", "40см."];
+  const sizePizzas = ["26", "30", "40"];
   const dispatch = useDispatch();
   const quantity = useSelector((state: RootState) =>
     state.cart.item.reduce((sum, obj) => sum + obj.quantity, 0),
   );
 
+  const count = useSelector(
+    (state: RootState) =>
+      state.cart.item.find(
+        (item) =>
+          item.id === id &&
+          item.type === typePizzas[activeType] &&
+          item.size === sizePizzas[activeSize], // убери 'см.'
+      )?.quantity || 0,
+  );
+
   const selectPizza = {
-    id: key,
+    id: id,
     name: name,
     imageUrl: imageUrl,
     price: price,
@@ -75,7 +85,7 @@ const PizzaItem: FC<IPizzaItemProps> = ({ key, name, imageUrl, price }) => {
 
         <button className={styles.addButton} onClick={handleAddPizza}>
           <span>+ Добавить </span>
-          <i>{quantity}</i>
+          <i>{count}</i>
         </button>
       </div>
     </div>
