@@ -7,7 +7,7 @@ const Sort = () => {
     <div className={styles.sort}>
       <p>Сортировка по:</p>
       <select>
-        <option value="star">популярности</option>
+        <option value="rating">популярности</option>
         <option value="price">по цене</option>
         <option value="abc">по алфавиту</option>
       </select>

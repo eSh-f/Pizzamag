@@ -6,8 +6,6 @@ import "../../App.css";
 const PizzaLIst = () => {
   const { data = [], error, isLoading } = useGetAllPizzasQuery();
 
-  console.log(data.map((p) => p.imageUrl));
-
   return (
     <div className="pizzaList">
       {data.map((p) => (

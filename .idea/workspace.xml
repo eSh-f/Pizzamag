@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4533c20-dca5-40a2-862d-ff8e2bfbc8d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/slices/cartSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Cart.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/slices/filterSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Skeleton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/slices/cartSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/slices/pizzaSlice.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pizza/PizzaItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pizza/PizzaItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pizza/PizzaLIst.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pizza/PizzaLIst.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/PizzaCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/PizzaCard.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +109,8 @@
       <workItem from="1747014025780" duration="7784000" />
       <workItem from="1747066877688" duration="1228000" />
       <workItem from="1747101055626" duration="8106000" />
+      <workItem from="1747149760615" duration="6074000" />
+      <workItem from="1747188770219" duration="5922000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import pizzaSlice from "./slices/pizzaSlice";
 import { pizzaApi } from "./pizzaApi";
 import cartSlice from "./slices/cartSlice";
+import filterSlice from "./slices/filterSlice";
 
 export const store = configureStore({
   reducer: {
+    filter: filterSlice,
     cart: cartSlice,
     [pizzaApi.reducerPath]: pizzaApi.reducer,
   },
