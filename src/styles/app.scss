@@ -34,3 +34,23 @@ h4{
   padding: 40px 20px;
   justify-content: flex-start;
 }
+
+.cartButton {
+  padding: 1px;
+  font-weight: 900;
+  background-color: #fe5f1e;
+  border: none;
+  color: white;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: orangered;
+  }
+}

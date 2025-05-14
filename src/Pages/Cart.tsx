@@ -2,8 +2,14 @@ import React from "react";
 import Header from "../components/Header";
 import "../styles/app.scss";
 import styles from "../styles/components/Cart.module.scss";
+import { RootState } from "../Redux/store";
+import { useSelector } from "react-redux";
 const Cart = () => {
-  const cardPizza = [1, 2, 3, 4];
+  const cartItems = useSelector((state: RootState) => state.cart.item);
+  const price = useSelector((state: RootState) => state.cart.total);
+  const quantity = useSelector((state: RootState) =>
+    state.cart.item.reduce((sum, obj) => sum + obj.quantity, 0),
+  );
 
   return (
     <div className={styles.cartPage}>
@@ -12,28 +18,34 @@ const Cart = () => {
         <div className={styles.cartHeader}>
           <h5>🗑️Корзина</h5> <button>🚫Очистить корзину</button>
         </div>
-        <div className={styles.cartItem}>
-          <div className={styles.pizzaInfo}>
-            img
-            <div className={styles.pizzaInfoTitle}>
-              <p>Сырная пицца</p> <p>тонкое тесто, 26см</p>
+        {cartItems.map((item) => (
+          <div className={styles.cartItem}>
+            <div className={styles.pizzaInfo}>
+              <img src={item.imageUrl} alt="" />
+              <div className={styles.pizzaInfoTitle}>
+                <p>{item.name}</p>{" "}
+                <p>
+                  {item.type}, {item.size}
+                </p>
+              </div>
             </div>
+            <div className={styles.pizzaButton}>
+              <button>-</button> <i>2</i> <button>+</button>
+            </div>
+            <p>{item.price} Р</p>
+            <button>x</button>
           </div>
-          <div className={styles.pizzaButton}>
-            <button>-</button> <i>2</i> <button>+</button>
-          </div>
-          <p>770 Р</p>
-          <button>x</button>
-        </div>
+        ))}
+
         <div className={styles.cartBottomInfo}>
           <p>
-            Всего пицц: <b>3шт.</b>
+            Всего пицц: <b>{quantity} шт.</b>
           </p>
-          <p>Сумма заказа: 900 Р</p>
+          <p>Сумма заказа: {price} Р</p>
         </div>
         <div className={styles.cartBottomButton}>
-          <button>Вернуться назад</button>
-          <button>Оплатить сейчас</button>
+          <button className="cartButton">Вернуться назад</button>
+          <button className="cartButton">Оплатить сейчас</button>
         </div>
       </div>
     </div>

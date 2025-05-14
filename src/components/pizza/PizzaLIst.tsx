@@ -3,6 +3,8 @@ import { useGetAllPizzasQuery } from "../../Redux/pizzaApi";
 import PizzaItem from "./PizzaItem";
 import "../../App.css";
 import Skeleton from "../Skeleton";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../Redux/slices/cartSlice";
 
 const PizzaLIst = () => {
   const { data = [], isLoading } = useGetAllPizzasQuery();
@@ -16,7 +18,7 @@ const PizzaLIst = () => {
               key={p.id}
               price={p.price}
               name={p.name}
-              image={p.imageUrl}
+              imageUrl={p.imageUrl}
             />
           ))}
     </div>

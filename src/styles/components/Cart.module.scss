@@ -49,6 +49,11 @@
     .pizzaInfo {
       display: flex;
 
+      img{
+        max-width: 70px;
+        max-height: 50px;
+      }
+
       .pizzaInfoTitle {
         display: flex;
         flex-direction: column;
