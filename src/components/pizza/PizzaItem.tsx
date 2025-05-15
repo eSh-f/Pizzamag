@@ -29,7 +29,7 @@ const PizzaItem: FC<IPizzaItemProps> = ({ id, name, imageUrl, price }) => {
         (item) =>
           item.id === id &&
           item.type === typePizzas[activeType] &&
-          item.size === sizePizzas[activeSize], // убери 'см.'
+          item.size === sizePizzas[activeSize],
       )?.quantity || 0,
   );
 
