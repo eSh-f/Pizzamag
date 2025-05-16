@@ -8,8 +8,8 @@ const Search = () => {
 
   return (
     <div>
-      🔍
       <div>
+        🔍
         <input value={searchText} onChange={handleChange} />
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/components/Header.module.scss";
 import { useNavigate } from "react-router-dom";
 import CartButton from "./CartButton";
+import Search from "./Search";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,6 +22,9 @@ const Header = () => {
             <p>Самая вкусная пицца в мире</p>
           </span>
         </div>
+      </div>
+      <div>
+        <Search />
       </div>
       <CartButton />
     </div>
