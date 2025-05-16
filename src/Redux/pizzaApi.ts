@@ -7,8 +7,9 @@ export const pizzaApi = createApi({
     baseUrl: "https://68143fe1225ff1af16284dc5.mockapi.io/",
   }),
   endpoints: (builder) => ({
-    getAllPizzas: builder.query<Pizza[], void>({
-      query: () => `pizzas`,
+    getAllPizzas: builder.query<Pizza[], string | void>({
+      query: (searchValue) =>
+        searchValue ? `pizzas?search=${searchValue}` : "pizzas",
     }),
   }),
 });

@@ -19,9 +19,7 @@ const PizzaItem: FC<IPizzaItemProps> = ({ id, name, imageUrl, price }) => {
   const typePizzas = ["тонкое", "традиционное"];
   const sizePizzas = ["26", "30", "40"];
   const dispatch = useDispatch();
-  const quantity = useSelector((state: RootState) =>
-    state.cart.item.reduce((sum, obj) => sum + obj.quantity, 0),
-  );
+
 
   const count = useSelector(
     (state: RootState) =>

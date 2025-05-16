@@ -3,11 +3,14 @@ import { useGetAllPizzasQuery } from "../../Redux/pizzaApi";
 import PizzaItem from "./PizzaItem";
 import "../../App.css";
 import Skeleton from "../Skeleton";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../Redux/slices/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../Redux/store";
 
 const PizzaLIst = () => {
-  const { data = [], isLoading } = useGetAllPizzasQuery();
+  const searchQuery = useSelector(
+    (state: RootState) => state.filter.searchValue,
+  );
+  const { data = [], isLoading } = useGetAllPizzasQuery(searchQuery);
 
   return (
     <div className="pizzaList">

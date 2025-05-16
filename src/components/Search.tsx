@@ -1,16 +1,20 @@
 import React, { useState } from "react";
-
+import styles from "../styles/components/Search.module.scss"
+import { RootState } from "../Redux/store";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchValue } from "../Redux/slices/filterSlice";
 const Search = () => {
-  const [searchText, setSearchText] = useState("");
+  const  dispatch = useDispatch();
+  const searchValue = useSelector((state: RootState) => state.filter.searchValue);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(event.target.value);
+    dispatch(setSearchValue(event.target.value));
   };
 
   return (
     <div>
-      <div>
+      <div className={styles.wrapperSearch}>
         🔍
-        <input value={searchText} onChange={handleChange} />
+        <input value={searchValue} onChange={handleChange} placeholder="Найдите свою пиццу..." />
       </div>
     </div>
   );
