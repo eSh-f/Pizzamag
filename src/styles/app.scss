@@ -6,6 +6,7 @@
 
 h4{
   margin: 15px 45px;
+  font-size: 40px;
 }
 }
 
@@ -22,9 +23,11 @@ h4{
 
 
 .pizzaOptions{
-  margin: 15px 30px ;
+  margin: 50px 60px ;
   display: flex;
   justify-content: space-between;
+
+
 }
 
 .pizzaList{
@@ -33,6 +36,8 @@ h4{
   gap: 30px;
   padding: 40px 20px;
   justify-content: flex-start;
+  margin: 20px;
+
 }
 
 .cartButton {
