@@ -8,6 +8,8 @@ const CartButton = () => {
   const totalPrice = useSelector((state: RootState) => state.cart.total);
   const cartItem = useSelector((state: RootState) => state.cart.item);
 
+  const totalItems = cartItem.reduce((sum, obj) => sum + obj.quantity,  0);
+
   const navigate = useNavigate();
 
   const handleClickCart = () => {
@@ -20,7 +22,7 @@ const CartButton = () => {
         <p>{totalPrice} Р</p>
       </span>
       <div className={styles.divider}></div>
-      <span>{cartItem.length}</span>
+      <span>{totalItems}</span>
     </button>
   );
 };

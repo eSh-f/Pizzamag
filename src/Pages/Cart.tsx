@@ -4,7 +4,7 @@ import "../styles/app.scss";
 import styles from "../styles/components/Cart.module.scss";
 import { RootState } from "../Redux/store";
 import { useDispatch, useSelector } from "react-redux";
-import { CartItem, clearCart, minusItem } from "../Redux/slices/cartSlice";
+import { addItem, CartItem, clearCart, minusItem, removeItem } from "../Redux/slices/cartSlice";
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.item);
@@ -19,8 +19,31 @@ const Cart = () => {
   };
 
 const handlePlus = (item: CartItem) => {
+  dispatch(addItem({
+    id: item.id,
+    name: item.name,
+    imageUrl: item.imageUrl,
+    price: item.price,
+    size: item.size,
+    type: item.type,
+  }));
 }
 
+const handleRemoveItem = (item: CartItem) => {
+  dispatch(removeItem({
+    id: item.id,
+    type: item.type,
+    size: item.size,
+  }));
+}
+
+const handleMinus= (item: CartItem) => {
+  dispatch(minusItem({
+    id: item.id,
+    size: item.size,
+    type: item.type,
+  }))
+}
 
 
   return (
@@ -43,10 +66,10 @@ const handlePlus = (item: CartItem) => {
               </div>
             </div>
             <div className={styles.pizzaButton}>
-              <button>-</button> <i>{item.quantity}</i> <button>+</button>
+              <button onClick={() => handleMinus(item)}>-</button> <i>{item.quantity}</i> <button onClick={() => handlePlus(item)}>+</button>
             </div>
             <p>{item.price} Р</p>
-            <button>x</button>
+            <button onClick={() => handleRemoveItem(item)}>x</button>
           </div>
         ))}
 

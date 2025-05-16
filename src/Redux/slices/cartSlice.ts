@@ -10,6 +10,7 @@ export interface CartItem {
   quantity: number;
 }
 
+
 interface CartState {
   item: CartItem[];
   total: number;
@@ -96,6 +97,9 @@ export const cartSlice = createSlice({
     },
   },
 });
+
+
+
 
 
 
