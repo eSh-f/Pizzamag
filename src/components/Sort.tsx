@@ -1,19 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "../styles/components/Sort.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setSortType } from "../Redux/slices/filterSlice";
 import { RootState } from "../Redux/store";
-
-interface SortOptions {
-  label: string;
-  value: string;
-}
+import { SortOptions } from "../types/types";
 
 const Sort = () => {
   const dispatch = useDispatch();
-  const selectedCategory = useSelector(
-    (state: RootState) => state.filter.category,
+  const selectedValue = useSelector(
+    (state: RootState) => state.filter.sortType,
   );
   const sortValue: SortOptions[] = [
     { label: "rating", value: "рейтингу" },
@@ -28,7 +24,7 @@ const Sort = () => {
   return (
     <div className={styles.sort}>
       <p>Сортировка по:</p>
-      <select value={selectedCategory} onChange={handleChange}>
+      <select value={selectedValue} onChange={handleChange}>
         {sortValue.map((option) => (
           <option key={option.label} value={option.label}>
             {option.value}

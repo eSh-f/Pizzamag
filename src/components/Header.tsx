@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/components/Header.module.scss";
 import { useNavigate } from "react-router-dom";
-import CartButton from "./CartButton";
+import CartButton from "./cart/CartButton";
 import Search from "./Search";
 
 const Header = () => {

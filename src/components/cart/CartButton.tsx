@@ -1,14 +1,14 @@
 import React from "react";
-import styles from "../styles/components/Header.module.scss";
+import styles from "../../styles/components/Header.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { RootState } from "../Redux/store";
+import { RootState } from "../../Redux/store";
 
 const CartButton = () => {
   const totalPrice = useSelector((state: RootState) => state.cart.total);
   const cartItem = useSelector((state: RootState) => state.cart.item);
 
-  const totalItems = cartItem.reduce((sum, obj) => sum + obj.quantity,  0);
+  const totalItems = cartItem.reduce((sum, obj) => sum + obj.quantity, 0);
 
   const navigate = useNavigate();
 

@@ -7,16 +7,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 
 const PizzaLIst = () => {
-  const searchQuery = useSelector(
-    (state: RootState) => state.filter.searchValue,
+  const category = useSelector((state: RootState) => state.filter.category);
+  const sortBy = useSelector((state: RootState) => state.filter.sortType);
+  const search = useSelector((state: RootState) => state.filter.searchValue);
+  const { data = [], isLoading } = useGetAllPizzasQuery({
+    search,
+    sortBy,
+    category,
+  });
+
+  const pizza = data.filter((p) =>
+    p.name.toLowerCase().includes(search.toLowerCase()),
   );
-  const { data = [], isLoading } = useGetAllPizzasQuery(searchQuery);
 
   return (
     <div className="pizzaList">
+      {!isLoading && pizza.length === 0 && <p>Пиццы не найдены!</p>}
       {isLoading
         ? [...new Array(6)].map((_, i) => <Skeleton key={i} />)
-        : data.map((p) => (
+        : pizza.map((p) => (
             <PizzaItem
               key={p.id}
               id={p.id}

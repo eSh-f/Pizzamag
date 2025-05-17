@@ -5,21 +5,19 @@ import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import { addItem } from "../../Redux/slices/cartSlice";
+import { IPizzaItemProps } from "../../types/types";
 
-interface IPizzaItemProps {
-  id: number;
-  imageUrl: string;
-  name: string;
-  price: number;
-}
-
-const PizzaItem: FC<IPizzaItemProps> = ({ id, name, imageUrl, price }) => {
+const PizzaItemComponent: FC<IPizzaItemProps> = ({
+  id,
+  name,
+  imageUrl,
+  price,
+}) => {
   const [activeType, setActiveType] = useState(0);
   const [activeSize, setActiveSize] = useState(0);
   const typePizzas = ["тонкое", "традиционное"];
   const sizePizzas = ["26", "30", "40"];
   const dispatch = useDispatch();
-
 
   const count = useSelector(
     (state: RootState) =>
@@ -90,4 +88,4 @@ const PizzaItem: FC<IPizzaItemProps> = ({ id, name, imageUrl, price }) => {
   );
 };
 
-export default PizzaItem;
+export default React.memo(PizzaItemComponent);
